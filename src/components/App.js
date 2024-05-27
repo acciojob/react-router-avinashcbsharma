@@ -8,11 +8,13 @@ import About from './About'
 const App = () => {
   return (
     <Routers>
+        <Layout/>
         <Routes>
-           <Layout/>
                 <Route path='/' element={<Home/>} />
-                <Route path='/about' element={<About/>} />           
+                <Route path='/about' element={<About/>} />
         </Routes>
     </Routers>   
   )
 }
+
+export default App
