@@ -1,13 +1,19 @@
+import React from 'react'
+import {BrowserRouter as Routers,Routes,Route} from 'react-router-dom'
+import Layout from './Layout'
+import Home from "./Home"
+import About from './About'
 
-import React from "react";
-import './../styles/App.css';
 
 const App = () => {
   return (
-    <div>
-        {/* Do not remove the main div */}
-    </div>
+    <Routers>
+        <Routes>
+            <Route path='/' element={<Layout/>}>
+                <Route index element={<Home/>} />
+                <Route path='/About' element={<About/>} />
+            </Route>
+        </Routes>
+    </Routers>   
   )
 }
-
-export default App
